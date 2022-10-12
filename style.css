@@ -152,7 +152,12 @@ body {
     line-height: 25px;
     letter-spacing: 0.30000001192092896px;
     text-align: left;
+    transition: all 0.5s ease;
+}
 
+.design a:hover {
+    font-size: 20px;
+    color: #121212;
 }
 
 .design .fa-solid {
@@ -174,6 +179,7 @@ body {
     font-weight: 600;
     font-size: 25px;
     line-height: 30px;
+    letter-spacing: -0.5px;
 }
 
 .services p {
@@ -228,6 +234,12 @@ body {
     letter-spacing: 0.30000001192092896px;
     text-align: left;
     color: #A06056;
+    transition: all 0.5s ease;
+}
+
+.trends a:hover {
+    font-size: 20px;
+    color: #121212;
 }
 
 .trends .fa-solid {
@@ -294,6 +306,7 @@ form button a {
 
     .mobile-hero-and-header {
         background: url(assets/images/header.png);
+        background-attachment: fixed;
         position: relative;
         padding-bottom: 100px;
         background-size: cover;
@@ -340,7 +353,6 @@ form button a {
         width: 100%;
         background: transparent;
         color: #706458;
-        /* position: fixed; */
     }
     
     .menu-list h2 {
@@ -363,23 +375,35 @@ form button a {
         font-family: 'Varta', sans-serif;
         padding: 15px 20px;
         display: block;
-        border-bottom: solid 1px #706458;
+        text-align: center;
+        border-top: solid 1px #706458;
         transition: all 0.35s ease;
     }
 
-    .menu-holder .menu-bar a:first-child {
-        border-top: solid 1px #706458;
+    .menu-bar h1 {
+        text-align: center;
+        color: #ffff;
+        font-size: 25px;
+        line-height: 30px;
+        font-size: 600;
+        margin-bottom: 15px;
+    }
+
+    .menu-holder .menu-bar a:last-child {
+        border-bottom: solid 1px #706458;
+        margin-bottom: 40px;
     }
     
     .menu-holder .menu-bar a:hover {
         padding-left: 35px;
+        background: #A06056;
     }
     
     .menu-list .icon {
         display: block;
         position: absolute;
         right: 30px;
-        top: 50px;
+        top: 45px;
         font-size: 32px;
         color: #ffff;
         transition: all 1s ease;
@@ -391,9 +415,9 @@ form button a {
 
     .design-and-services {
         flex-direction: column;
-        padding: 55px 0 55px 40px;
-        align-items: left;
-        justify-content: flex-start;
+        padding: 55px 0;
+        align-items: center;
+        justify-content: center;
     }
 
     .design h1 {
@@ -431,7 +455,7 @@ form button a {
     }
 
     .trends-and-newsletter {
-        padding-bottom: 20px;
+        padding: 20px 0;
     }
 
     .trends {
@@ -443,6 +467,7 @@ form button a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     form input {
@@ -456,5 +481,6 @@ form button a {
 
     form button:hover {
         height: 45px;
+        width: 311px;
     }
 }
