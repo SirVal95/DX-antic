@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+.hero-and-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+}
+
+.header {
+    background: #F3EEE8;
+    width: 50%;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.logo {
+    margin-right: 20px;
+    color:  #A06056;
+    font-size: 34px;
+    line-height: 25px;
+    margin-top: 10.5px;
+    font-weight: 700;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #706458;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Varta', sans-serif;
+    margin: 12px 10.5px 0 10.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu a:hover {
+    font-size: 21px;
+}
+
+.menu-holder {
+    display: none;
+}
+
+.hero-left {
+    margin-left: 112px;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+.hero-left label, .hero-mobile label {
+    font-size: 14px;
+    color:  #A06056;
+    font-family: 'Varta', sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.hero-left h1, .hero-mobile h1 {
+    color: #A06056;
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    font-style: normal;
+    margin: 25px 0;
+}
+
+.hero-left p, .hero-mobile p {
+    font-family: 'Varta', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 31px;
+    color: #706458e6;
+    margin-bottom: 20px;
+}
+
+.hero-left .fa-solid, .hero-mobile .fa-solid {
+    color: #A06056;
+    border: solid 1.5px #A06056;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.hero-right {
+    background: url(assets/images/header.png);
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: right;
+}
+
+.hero-right a {
+    color: #ffff;
+    margin: 30px;
+    border: solid 1.5px #ffff;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.hero-right a:hover {
+    font-size: 20px;
+}
+
+.hero-right  .fa-solid {
+    margin-top: 12px;
+}
+
+
+.design-and-services {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 112px;
+    background: #F3EEE8;
+}
+
+.design h1 {
+    color: #706458;
+    line-height: 60px;
+    font-size: 55px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.design a {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #A06056;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+
+}
+
+.design .fa-solid {
+    font-size: 8px;
+    margin-left: 3px;
+}
+
+.services-top, .services-down {
+    display: flex;
+}
+
+.services-down {
+    margin-top: 40px;
+}
+
+.services h4 {
+    color: #A06056;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.services p {
+    font-size: 18px;
+    color: #706458;
+    font-weight: 400;
+    font-family: 'Varta', sans-serif;
+    line-height: 25px;
+}
+
+.services-top .advice:first-child, .services-down .advice:first-child {
+    margin-right: 30px;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .hero-and-header {
+        display: none;
+    }
+
+    .mobile-hero-and-header {
+        background: url(assets/images/header.png);
+        position: relative;
+        padding-bottom: 100px;
+        background-size: cover;
+        background-position: top center;
+        
+    }
+
+    .hero-mobile {
+        display: block;
+    }
+
+    .hero-mobile {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .hero-mobile label {
+        color: #ffff;
+    }
+
+    .hero-mobile h1 {
+        color: #ffff;
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+    }
+
+    .hero-mobile p {
+        color: #F7F8F9;
+        line-height: 25px;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .hero-mobile .fa-solid {
+        color: #ffff;
+        border: solid 1.5px #ffff;
+    }    
+    
+    .menu-holder {
+        display: block;
+        height: auto;
+        width: 100%;
+        background: transparent;
+        color: #706458;
+        /* position: fixed; */
+    }
+    
+    .menu-list h2 {
+        font-weight: 700;
+        padding: 40px 0 40px 30px;
+        color: #ffff;
+        font-size: 34px;
+    }
+    
+    .menu-bar {
+        display: none;
+    }
+    
+    .menu-holder .menu-bar a {
+        text-decoration: none;
+        color: #F3EEE8;
+        line-height: 25px;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Varta', sans-serif;
+        padding: 15px 20px;
+        display: block;
+        border-bottom: solid 1px #706458;
+        transition: all 0.35s ease;
+    }
+
+    .menu-holder .menu-bar a:first-child {
+        border-top: solid 1px #706458;
+    }
+    
+    .menu-holder .menu-bar a:hover {
+        padding-left: 35px;
+    }
+    
+    .menu-list .icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 50px;
+        font-size: 32px;
+        color: #ffff;
+        transition: all 1s ease;
+    }
+    
+    .menu-list .icon:hover {
+        font-size: 36px;
+    }
+
+    .design-and-services {
+        flex-direction: column;
+        padding: 55px 0 55px 40px;
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    .design h1 {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 40px;
+        color: #534B42;
+        letter-spacing: -0.3px;
+    }
+
+    .design a {
+        font-weight: 900;
+    }
+
+    .services h4 {
+        margin-bottom: 5px;
+    }
+
+    .services-top {
+        flex-direction: column;
+    }
+
+    .services-down {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .services-top .advice:first-child, .services-down .advice:first-child {
+        margin-right: 0px;
+    }
+
+    .services .advice {
+        margin-top: 30px;
+    }
+    
+}
