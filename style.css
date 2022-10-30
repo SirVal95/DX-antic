@@ -197,11 +197,15 @@ body {
 .trends-and-newsletter {
     width: 100%;
     height: auto;
-    padding: 20px 40px 60px 40px;
+    padding: 20px 40px 20px 40px;
     background: #ffff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.trends {
+    margin-right: 15%;
 }
 
 
@@ -289,6 +293,82 @@ form button a {
     text-align: center;
     color: #ffff;
 }
+
+/* Slider Styling */
+
+.slider {
+    width: 100%;
+    height: auto;
+    background: #ffff;
+    padding: 40px 0 20px 110px;
+}
+
+.slider-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide1, .slide2, .slide3 {
+    background: url(assets/images/slide1\(1\).png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 380px;
+}
+
+.slide2 {
+    background: url(assets/images/slide2\(1\).png) no-repeat;
+}
+
+.slide3 {
+    background: url(assets/images/slide3png\(1\).png) no-repeat;
+}
+
+.slider-images h4 {
+    display: none;
+}
+
+.inspirations {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.inspirations h2 {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 40px;
+    letter-spacing: -0.3px;
+    color: #534B42;
+}
+
+.inspirations p {
+    font-family: 'Varta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #706458;
+}
+
+.inspirations .fa-solid {
+    padding: 10px;
+    color: #A06056;
+    border: 2px solid #A06056;
+    border-radius: 50%;
+    font-size: 15px;
+    background: #ffff;
+    cursor: pointer;
+}
+
+.inspirations .fa-less-than {
+    margin-right: 5px;
+}
+
 
 .built {
     text-align: center;
@@ -478,4 +558,58 @@ form button a {
         height: 45px;
         width: 311px;
     }
+
+    .slider {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .inspirations {
+        flex-direction: column;
+    }
+
+    .inspirations p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .inspirations .fa-solid {
+        display: none;
+    }
+
+    .slider-images {
+        flex-direction: column;
+    }
+
+    .slider-images h4 {
+        display: block;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 20px 0 20px 0;
+    }
+
+    .slide1 {
+        width: 80vw;
+        height: 270px;
+    }
+
+    .slide2 {
+        width: 80vw;
+        height: 270px;
+        background-position: bottom center;
+    }
+
+    .slide3 {
+        width: 80vw;
+        height: 270px;
+        background-position: bottom center;
+    }
+
 }
