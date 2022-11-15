@@ -296,20 +296,39 @@ form button a {
 
 /* Slider Styling */
 
-.slider {
+.swiper {
     width: 100%;
-    height: auto;
+    height: fit-content;
     background: #ffff;
-    padding: 40px 0 20px 110px;
+    /* padding: 40px 0 20px 110px; */
+}
+
+.swiper-wrapper {
+    padding-left: 10%;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background: #ffff;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 50vh;
+}
+
+.mobile-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffff;
 }
 
 .slider-images {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
 }
 
-.slide1, .slide2, .slide3 {
+.slide1, .slide2, .slide3, .slide4 {
     background: url(assets/images/slide1\(1\).png) no-repeat;
     background-position: center;
     background-size: cover;
@@ -325,13 +344,17 @@ form button a {
     background: url(assets/images/slide3png\(1\).png) no-repeat;
 }
 
+.slide4 {
+    background: url(assets/images/scandinavian-living-room-with-pink-sofa-empty-white-wall-background_41470-4940.webp) no-repeat;
+}
+
 .slider-images h4 {
     display: none;
 }
 
 .inspirations {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     margin-top: 30px;
 }
@@ -353,6 +376,7 @@ form button a {
     font-size: 18px;
     line-height: 25px;
     color: #706458;
+    margin: 0 100px;
 }
 
 .inspirations .fa-solid {
@@ -369,13 +393,156 @@ form button a {
     margin-right: 5px;
 }
 
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 60px 100px;
+    margin-top: 40px;
+    background: #F3EEE8;
+}
 
-.built {
-    text-align: center;
-    font-size: 12px;
+.footer h4 {
+    display: none;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.content h2, .footer h4 {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 25px;
+    letter-spacing: 2px;
     color: #534B42;
-    line-height: 15px;
+}
+
+.link-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+   
+}
+
+.link-group .group {
+    margin: 0 30px;
+}
+
+.link-group .group h3, .fifth-column h3 {
+    font-family: 'Varta';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.2px;
+    color: #534B42;
+    margin-bottom: 14px;
+}
+
+.link-group .group a{
+    display: block;
+    font-family: 'Varta';
+    font-style: normal;
     font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 25px;
+    color: #706458;
+    margin-bottom: 12px;
+    transition: 0.5s;
+}
+
+.link-group .group a:hover {
+    transform: translateY(-5px);
+}
+
+.fifth-column {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.fifth-column img {
+    width: auto;
+    height: 150px;
+    margin-bottom: 12px;
+}
+
+.fifth-column p {
+    font-family: 'Varta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #706458;
+    margin-bottom: 12px;
+}
+
+.fifth-column a {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #A06056;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.fifth-column a:hover {
+    font-size: 20px;
+    color: #121212;
+}
+
+.fifth-column .fa-solid {
+    font-size: 8px;
+    margin-left: 1px;
+}
+
+
+.social-networks {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.social-networks a {
+    padding: 5px 10px;
+    border: solid 3px #A06056;
+    border-radius: 50%;
+    color: #706458;
+    margin-left: 10px;
+}
+
+.legals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legals p, .legal-links a {
+    font-family: 'Varta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #706458b3;
+}
+
+.legal-links a {
+    margin-left: 12px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.legal-links a:hover {
+    color: #121212;
 }
 
 @media screen and (max-width:900px) {
@@ -573,16 +740,22 @@ form button a {
 
     .inspirations p {
         font-size: 16px;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin: 20px 0;
     }
 
     .inspirations .fa-solid {
         display: none;
     }
 
+    .swiper {
+        display: none;
+    }
+
     .slider-images {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .slider-images h4 {
@@ -592,7 +765,7 @@ form button a {
         font-weight: 400;
         font-size: 15px;
         line-height: 20px;
-        margin: 20px 0 20px 0;
+        margin: 15px 0 20px 0;
     }
 
     .slide1 {
@@ -610,6 +783,61 @@ form button a {
         width: 80vw;
         height: 270px;
         background-position: bottom center;
+    }
+
+    .slide4 {
+        width: 80vw;
+        height: 270px;
+        background-position: bottom center;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer h4 {
+        display: block;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content h2 {
+        display: none;
+    }
+
+    .link-group {
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+    }
+
+    .link-group .group {
+        margin-top: 25px;
+    }
+
+    .fifth-column {
+        margin: 30px 30px 0 30px;
+    }
+
+    .social-networks {
+        margin: 50px 0;
+    }
+
+    .legals {
+        flex-direction: column-reverse;
+        margin: 10px 40px;
+        justify-content: left;
+    }
+
+    .legal-links{
+        margin-bottom: 40px;
+    }
+
+    .legal-links a{
+        margin: 0 12px 0 0;
     }
 
 }

@@ -13,3 +13,22 @@ function menuBarList() {
 function myFunction(x) {
     x.classList.toggle("fa-xmark")
 }
+
+// initializing the slider
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // to initialize on-scroll animations
+
+new WOW().init();
